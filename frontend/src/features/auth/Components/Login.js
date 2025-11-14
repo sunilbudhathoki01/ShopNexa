@@ -5,6 +5,7 @@ import {
   incrementAsync,
   selectCount,
 } from "../../product-list/ProductListSlice";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const count = useSelector(selectCount);
@@ -84,12 +85,12 @@ export default function Login() {
 
         <p class="mt-10 text-center text-sm/6 text-gray-400">
           Not a member?
-          <a
-            href="#"
+          <Link
+            to="/signup"
             class="font-semibold text-indigo-400 hover:text-indigo-300"
           >
             Create an Account{" "}
-          </a>
+          </Link>
         </p>
       </div>
     </div>
