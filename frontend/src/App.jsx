@@ -3,6 +3,7 @@ import Home from "./pages/Home.js";
 import LoginPage from "./pages/LoginPage.js";
 import SignupPage from "./pages/SignupPage.js";
 import {createBrowserRouter,RouterProvider,Route,Link} from 'react-router-dom'
+import CartPage from "./pages/CartPage.js";
 
 const router=createBrowserRouter([
   {
@@ -18,7 +19,8 @@ const router=createBrowserRouter([
     element:(<SignupPage/>)
   },
   {
-    
+     path:"cart",
+    element:(<CartPage/>)
   }
 ])
 const App = () => {

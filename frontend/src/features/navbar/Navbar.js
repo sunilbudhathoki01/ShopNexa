@@ -13,6 +13,7 @@ import {
   ShoppingCartIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const user = {
   name: "Tom Cook",
@@ -70,14 +71,16 @@ export default function Navbar({ children }) {
               </div>
               <div className="hidden md:block">
                 <div className="ml-4 flex items-center md:ml-6">
-                  <button
-                    type="button"
-                    className="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500"
-                  >
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">View notifications</span>
-                    <ShoppingCartIcon aria-hidden="true" className="size-6" />
-                  </button>
+                  <Link to="/cart">
+                    <button
+                      type="button"
+                      className="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500"
+                    >
+                      <span className="absolute -inset-1.5" />
+                      <span className="sr-only">View notifications</span>
+                      <ShoppingCartIcon aria-hidden="true" className="size-6" />
+                    </button>
+                  </Link>
                   <span className="inline-flex items-center rounded-md mb-7 -ml-3 bg-red-400/10 px-2 py-1 text-xs font-medium text-red-400 ring-1 ring-inset ring-red-400/20">
                     3
                   </span>
@@ -166,13 +169,15 @@ export default function Navbar({ children }) {
                     {user.email}
                   </div>
                 </div>
-                <button
-                  type="button"
-                  className="relative ml-auto shrink-0 rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500"
-                >
-                  <span className="absolute -inset-1.5" />
-                  <ShoppingBagIcon aria-hidden="true" className="size-6" />
-                </button>
+                <Link to="/cart">
+                  <button
+                    type="button"
+                    className="relative ml-auto shrink-0 rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500"
+                  >
+                    <span className="absolute -inset-1.5" />
+                    <ShoppingBagIcon aria-hidden="true" className="size-6" />
+                  </button>
+                </Link>
                 <span className="inline-flex items-center rounded-md mb-7 -ml-3 bg-red-400/10 px-2 py-1 text-xs font-medium text-red-400 ring-1 ring-inset ring-red-400/20">
                   3
                 </span>
